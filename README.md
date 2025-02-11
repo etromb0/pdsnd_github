@@ -8,7 +8,7 @@ This project is called **Explore US Bikeshare Data** from the <ins>Introduction 
 This project calculates statistics and builds an interactive environment where a user chooses the data and filter for a dataset to analyze using Python.
 
 ### Files used
-I used the following files:
+I used the following files which contain datasets for 3 different cities:
 - washington.csv
 - new_york_city.csv
 - chicago.csv
