@@ -98,15 +98,15 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # TO DO: display the most common month
+    # display the most common month
     common_month = df['month'].mode()[0]
     print('The most common month is: ', common_month)
     
-    # TO DO: display the most common day of week
+    # display the most common day of week
     common_day_of_week = df['day_of_week'].mode()[0]
     print('The most common day of week is: ', common_day_of_week)
 
-    # TO DO: display the most common start hour
+    # display the most common start hour
     start_hour = df['Start Time'].dt.hour
     common_start_hour = start_hour.mode()[0]
     print('The most common start hour is: ', common_start_hour)
@@ -140,13 +140,13 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # TO DO: display total travel time
+    # display total travel time
     df['End Time'] = pd.to_datetime(df['End Time'])
     travel_time = df['End Time'] - df['Start Time']
     total_travel_time = travel_time.sum()
     print('The total travel time is: ', total_travel_time)
 
-    # TO DO: display mean travel time
+    # display mean travel time
     mean_travel_time = travel_time.mean()
     print('The average travel time is: ', mean_travel_time)
 
@@ -159,15 +159,15 @@ def user_stats(df):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
-    # TO DO: Display counts of user types
+    # Display counts of user types
     print(df.groupby('User Type')['User Type'].count())
     while True:
         try:
             
-    # TO DO: Display counts of gender
+    # Display counts of gender
             print(df.groupby('Gender')['Gender'].count())
                      
-    # TO DO: Display earliest, most recent, and most common year of birth
+    # Display earliest, most recent, and most common year of birth
             print('The earliest birth year is: ', int(df['Birth Year'].min()))
             print('The most recent birth year is: ', int(df['Birth Year'].max()))
             print('The most common birth year is: ', int(df['Birth Year'].mode()))   
